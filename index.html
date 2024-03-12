@@ -20,7 +20,7 @@
             font-size: 40px;
             font-weight: bold;
             color: #FFD700; /* Golden color */
-            margin-bottom: 10px;
+            margin-bottom: 20px; /* Increased space between header and links */
         }
         nav {
             text-align: justify;
@@ -29,6 +29,7 @@
             list-style-type: none;
             padding: 0;
             display: inline;
+            margin-left: 20px; /* Increased space between header and links */
         }
         nav ul li {
             display: inline;
@@ -60,8 +61,8 @@
             margin-top: 10px;
         }
         .picture img {
-            width: 300px; /* Approx. 400px (4 inches) */
-            height: 225px; /* Approx. 300px (3 inches) */
+            width: 320px; /* Converted from inches to pixels */
+            height: 240px; /* Converted from inches to pixels */
             border-radius: 10px;
         }
         .tagline {
@@ -128,24 +129,4 @@
     document.addEventListener("DOMContentLoaded", function() {
         var sections = document.querySelectorAll('section');
         for (var i = 0; i < sections.length; i++) {
-            sections[i].style.display = "block";
-            sections[i].classList.add('collapsed');
-        }
-        var links = document.querySelectorAll('nav ul li a');
-        for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function(event) {
-                event.preventDefault();
-                var sectionId = this.getAttribute('href').substring(1);
-                var section = document.getElementById(sectionId);
-                var collapsedSections = document.querySelectorAll('.collapsed');
-                for (var j = 0; j < collapsedSections.length; j++) {
-                    collapsedSections[j].style.display = "none";
-                }
-                section.style.display = "block";
-            });
-        }
-    });
-</script>
-
-</body>
-</html>
+            sections[i].style
