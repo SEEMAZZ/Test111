@@ -11,7 +11,7 @@
             padding: 0;
         }
         header {
-            background-color: #00BFFF; /* Cobalt Blue */
+            background-color: #003366; /* Darker shade of blue */
             padding: 20px;
             text-align: center;
             border-bottom: 3px solid #FFD700; /* Golden Border */
@@ -19,7 +19,8 @@
         header h1 {
             font-size: 40px;
             font-weight: bold;
-            color: #000;
+            color: #FFD700; /* Golden color */
+            margin-bottom: 10px;
         }
         nav {
             float: right;
@@ -45,6 +46,7 @@
         }
         section {
             margin: 20px;
+            margin-right: 50px; /* Right indent */
         }
         h2 {
             color: #00BFFF; /* Normal Blue */
@@ -55,7 +57,13 @@
         }
         .picture {
             float: left;
-            margin-right: 20px;
+            margin: 20px;
+            margin-left: 50px; /* Left margin for the picture */
+        }
+        .picture img {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 10px;
         }
         .tagline {
             font-family: 'Comic Sans MS', cursive; /* Funky font */
@@ -79,6 +87,11 @@
     </nav>
 </header>
 
+<div class="picture">
+    <img src="your_picture.jpg" alt="Your Picture">
+    <div class="tagline">Kind over Cool</div>
+</div>
+
 <section id="personal">
     <h2>Personal Details</h2>
     <p><strong>Contact Details:</strong></p>
@@ -91,13 +104,15 @@
 
 <section id="education">
     <h2>Education</h2>
-    <p><strong>Graduated from</strong> xxx college in blah blah blah (xxxx - yyyy)</p>
-    <p><strong>Post Graduation from</strong> yyyy college in flaw flaw flaw (2024-2026)</p>
+    <p><strong>Education:</strong></p>
+    <p>Graduated from xxx college in blah blah blah (xxxx - yyyy)</p>
+    <p>Post Graduation from yyyy college in flaw flaw flaw (2024-2026)</p>
 </section>
 
 <section id="work">
     <h2>Work Experience</h2>
-    <p><strong>Worked as an intern in</strong> xyz organization from xxx to yyyy.</p>
+    <p><strong>Work Experience:</strong></p>
+    <p>Worked as an intern in xyz organization from xxx to yyyy.</p>
 </section>
 
 <section id="awards">
@@ -108,11 +123,6 @@
     <p><strong>Arts:</strong></p>
     <p>> Represented the college in the Annual Design Fest in DU</p>
 </section>
-
-<div class="picture">
-    <img src="your_picture.jpg" alt="Your Picture">
-    <div class="tagline">Kind over Cool</div>
-</div>
 
 </body>
 </html>
