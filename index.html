@@ -11,7 +11,7 @@
             padding: 0;
         }
         header {
-            background-color: #003366; /* Darker shade of blue */
+            background-color: #00264d; /* Darker shade of blue */
             padding: 20px;
             text-align: center;
             border-bottom: 3px solid #FFD700; /* Golden Border */
@@ -23,20 +23,19 @@
             margin-bottom: 10px;
         }
         nav {
-            float: right;
-            margin-top: -50px;
-            margin-right: 20px;
+            text-align: justify;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            display: inline;
         }
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
         nav ul li a {
-            color: #00BFFF; /* Sky Blue */
+            color: #FFD700; /* Yellow */
             font-weight: bold;
             font-size: 18px;
             text-decoration: none;
@@ -46,7 +45,7 @@
         }
         section {
             margin: 20px;
-            margin-right: 50px; /* Right indent */
+            display: none; /* Collapsed by default */
         }
         h2 {
             color: #00BFFF; /* Normal Blue */
@@ -56,13 +55,13 @@
             margin: 10px 0;
         }
         .picture {
-            float: left;
+            float: right;
             margin: 20px;
-            margin-left: 50px; /* Left margin for the picture */
+            margin-top: 10px;
         }
         .picture img {
-            width: 150px; /* Adjust the size as needed */
-            height: auto;
+            width: 300px; /* 4 * 3 inches converted to pixels */
+            height: 225px; /* 4 * 3 inches converted to pixels */
             border-radius: 10px;
         }
         .tagline {
@@ -77,15 +76,16 @@
 
 <header>
     <h1>Name</h1>
-    <nav>
-        <ul>
-            <li><a href="#personal">Personal Details</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work">Work Experience</a></li>
-            <li><a href="#awards">Awards and Recognition</a></li>
-        </ul>
-    </nav>
 </header>
+
+<nav>
+    <ul>
+        <li><a href="#personal">Personal Details</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work Experience</a></li>
+        <li><a href="#awards">Awards and Recognition</a></li>
+    </ul>
+</nav>
 
 <div class="picture">
     <img src="your_picture.jpg" alt="Your Picture">
@@ -123,6 +123,15 @@
     <p><strong>Arts:</strong></p>
     <p>> Represented the college in the Annual Design Fest in DU</p>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sections = document.querySelectorAll('section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = "none";
+        }
+    });
+</script>
 
 </body>
 </html>
